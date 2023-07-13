@@ -1,0 +1,11 @@
+[package]
+name = "xtoken"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+description = "Iterator based no_std XML Tokenizer using memchr"
+repository = "https://github.com/Xiphoseer/xtoken"
+
+[dependencies]
+memchr = "2.5.0"
