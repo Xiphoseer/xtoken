@@ -130,6 +130,7 @@ impl<'a> Tokenizer<'a> {
         if let Some(pos) = memchr::memchr(b'>', self.rest) {
             let (span, rest) = self.rest.split_at(pos + 1);
             self.rest = rest;
+            self.depth -= 1;
             Token::DeclEnd(span)
         } else {
             self.rest_err()
